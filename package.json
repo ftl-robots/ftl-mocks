@@ -1,0 +1,24 @@
+{
+  "name": "ftl-mocks",
+  "version": "1.0.0",
+  "description": "Mock components for FTL code testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhiquanyeo/ftl-mocks.git"
+  },
+  "author": "ZQ Yeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhiquanyeo/ftl-mocks/issues"
+  },
+  "homepage": "https://github.com/zhiquanyeo/ftl-mocks#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "socket.io": "^2.0.3",
+    "winston": "^2.3.1"
+  }
+}
