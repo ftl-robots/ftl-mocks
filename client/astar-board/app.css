@@ -1,0 +1,79 @@
+.board-image {
+    width: 776px;
+    height: 332px;
+    background-image: url("pololu-astar-leds-buttons.png");
+    position: relative;
+}
+
+.led-yellow {
+    width: 36px;
+    height: 21px;
+    position: absolute;
+    top: 203px;
+    left: 168px;
+    background-color: transparent
+}
+
+.led-yellow.on {
+    background-color: yellow;
+}
+
+.led-red {
+    width: 21px;
+    height: 36px;
+    position: absolute;
+    top: 206px;
+    left: 476px;
+    background-color: transparent
+}
+
+.led-red.on {
+    background-color: red;
+}
+
+.led-green {
+    width: 21px;
+    height: 36px;
+    position: absolute;
+    top: 206px;
+    left: 424px;
+    background-color: transparent
+}
+
+.led-green.on {
+    background-color: green;
+}
+
+.board-button {
+    width: 84px;
+    height: 66px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.board-button:hover {
+    background-color: rgba(50, 50, 50, 0.4);
+}
+
+.board-button.pressed {
+    background-color: purple;
+}
+
+.board-button.pressed:hover {
+    background-color: rgba(128, 0, 128, 0.8);
+}
+
+.board-button.button-a {
+    left: 70px;
+    top: 250px;
+}
+
+.board-button.button-b {
+    left: 302px;
+    top: 250px;
+}
+
+.board-button.button-c {
+    left: 535px;
+    top: 250px;
+}
