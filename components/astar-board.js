@@ -3,6 +3,7 @@ const logger = require('winston');
 const express = require('express');
 const http = require('http');
 const socketio = require('socket.io');
+const path = require('path');
 
 // ===  Memory Map  ===
 var MMAP_CONFIG_SECT_START = 0;
@@ -92,9 +93,10 @@ class MockAstarBoard {
     }
 
     _setupServer() {
-        this.d_app.use(express.static('client/astar-board'));
+        this.d_app.use(express.static(path.join(__dirname, '../client/astar-board')));
         this.d_app.get('/', (req, res) => {
-            res.sendFile(__dirname + '/client/astar-board/index.html');
+            console.log('dirname = ', __dirname);
+            res.sendFile('index.html', { root: path.join(__dirname, '../client/astar-board') });
         });
 
         this.d_io.on('connection', (socket) => {

@@ -21,9 +21,9 @@ class MockI2C extends Interfaces.I2C {
     }
 
     _setupServer() {
-        this.d_app.use(express.static('client/i2c'));
+        this.d_app.use(express.static(path.join(__dirname, '../client/i2x')));
         this.d_app.get('/', (req, res) => {
-            res.sendFile(__dirname + '/client/i2c/index.html');
+            res.sendFile('index.html', { root: path.join(__dirname, '../client/i2c') });
         });
 
         this.d_io.on('connection', (socket) => {
