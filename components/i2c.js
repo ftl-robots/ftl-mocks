@@ -4,6 +4,7 @@ const logger = require('winston');
 const express = require('express');
 const http = require('http');
 const socketio = require('socket.io');
+const path = require('path');
 
 class MockI2C extends Interfaces.I2C {
     constructor(serverPort) {

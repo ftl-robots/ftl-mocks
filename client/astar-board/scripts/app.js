@@ -8,6 +8,26 @@ var buttonA = document.getElementById('button-a');
 var buttonB = document.getElementById('button-b');
 var buttonC = document.getElementById('button-c');
 
+var motor1Speed = document.getElementById('motor-1-speed');
+var motor2Speed = document.getElementById('motor-2-speed');
+var motor1Positive = document.getElementById('motor-1-positive');
+var motor1Negative = document.getElementById('motor-1-negative');
+var motor2Positive = document.getElementById('motor-2-positive');
+var motor2Negative = document.getElementById('motor-2-negative');
+
+var motorElements = [
+    {
+        speed: motor1Speed,
+        positive: motor1Positive,
+        negative: motor1Negative
+    },
+    {
+        speed: motor2Speed,
+        positive: motor2Positive,
+        negative: motor2Negative
+    },
+]
+
 buttonA.addEventListener('click', onButtonClicked.bind(null, 'buttonA'));
 buttonB.addEventListener('click', onButtonClicked.bind(null, 'buttonB'));
 buttonC.addEventListener('click', onButtonClicked.bind(null, 'buttonC'));
@@ -81,7 +101,9 @@ function updateState() {
         ledGreen.classList.remove('on');
     }
 
-    // TODO Do motors too
+    updateMotor(0, m1Value);
+    updateMotor(1, m2Value);
+
     if (buttonStates.buttonA) {
         buttonA.classList.add('pressed');
     }
@@ -131,4 +153,32 @@ function onEntryChanged(idx, event) {
 
     console.log('byte ' + idx + ' changed to: ' + newVal)
 }
+
+function updateMotor(motorNum, speed) {
+    if (motorNum < 0 || motorNum > 1) return;
+    // Make sure the speed is -400 to 400
+    if (speed < -400) {
+        speed = -400;
+    }
+    if (speed > 400) {
+        speed = 400;
+    }
+
+    var elements = motorElements[motorNum];
+    elements.speed.innerHTML = speed;
+
+    elements.positive.style.width = '0px';
+    elements.negative.style.width = '0px';
+
+    var width;
+    if (speed > 0) {
+        width = (speed / 400) * 250;
+        elements.positive.style.width = width + 'px';
+    }
+    else if (speed < 0) {
+        width = (-speed / 400) * 250;
+        elements.negative.style.width = width + 'px';
+    }
+}
+
 });

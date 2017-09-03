@@ -77,3 +77,27 @@
     left: 535px;
     top: 250px;
 }
+
+.motor-container {
+    position: relative;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 25px;
+    border: 1px solid black;
+}
+
+.motor-container .positive {
+    position: abolute;
+    top: 0px;
+    left: 250px;
+    height: 25px;
+    background-color: green;
+}
+
+.motor-container .negative {
+    position: absolute;
+    top: 0px;
+    right: 250px;
+    height: 25px;
+    background-color: green;
+}
