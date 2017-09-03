@@ -1,4 +1,4 @@
-const logger = require('winston');
+const logger = require('../logger').create('Mock-Astar');
 
 const express = require('express');
 const http = require('http');

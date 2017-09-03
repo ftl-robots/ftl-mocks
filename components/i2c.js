@@ -1,5 +1,5 @@
 const { Interfaces } = require('ftl-robot-host');
-const logger = require('winston');
+const logger = require('../logger').create('Mock-i2c');
 
 const express = require('express');
 const http = require('http');
