@@ -1,5 +1,5 @@
 {
-  "name": "ftl-mocks",
+  "name": "@ftl-robots/ftl-mocks",
   "version": "1.0.0",
   "description": "Mock components for FTL code testing",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhiquanyeo/ftl-mocks.git"
+    "url": "git+https://github.com/ftl-robots/ftl-mocks.git"
   },
   "author": "ZQ Yeo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zhiquanyeo/ftl-mocks/issues"
+    "url": "https://github.com/ftl-robots/ftl-mocks/issues"
   },
-  "homepage": "https://github.com/zhiquanyeo/ftl-mocks#readme",
+  "homepage": "https://github.com/ftl-robots/ftl-mocks#readme",
   "dependencies": {
     "express": "^4.15.4",
     "socket.io": "^2.0.3",
