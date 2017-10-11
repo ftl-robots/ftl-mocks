@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ftl-robots/ftl-mocks#readme",
   "dependencies": {
+    "@ftl-robots/ftl-robot-host": "^1.0.3",
     "express": "^4.15.4",
     "socket.io": "^2.0.3",
     "winston": "^2.3.1"

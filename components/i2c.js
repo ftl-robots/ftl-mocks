@@ -1,4 +1,4 @@
-const { Interfaces } = require('ftl-robot-host');
+const { Interfaces } = require('@ftl-robots/ftl-robot-host');
 const logger = require('../logger').create('Mock-i2c');
 
 const express = require('express');
